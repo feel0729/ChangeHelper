@@ -1,0 +1,21 @@
+server:
+  port: 5000
+
+spring:
+  thymeleaf:
+    check-template-location: true
+    prefix: classpath:/templates/
+    servlet:
+      content-type: text/html
+    suffix: .html
+    cache: false
+    encoding: UTF-8
+    mode: HTML
+  web:
+    resources:
+      static-locations: classpath:/static/
+  artemis:
+    mode: embedded
+    embedded:
+      enabled: true
+      queues: changeHelperQueue
